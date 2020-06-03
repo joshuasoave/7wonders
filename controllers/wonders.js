@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const Wonder = require('../models/wonders.js')
 
 //routes
 //local host
@@ -12,7 +13,9 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/new', (req, res) => {
-    res.send(req.body)
+    Wonder.create(req.body, (err, newWonder) => {
+        res.send(newWonder)
+    })
 })
 
 module.exports = router
