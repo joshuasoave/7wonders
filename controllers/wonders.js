@@ -30,6 +30,12 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
+router.put('/:id', (req, res) => {
+    Wonder.findByIdAndUpdate(req.params.id, req.body, (err, updatedWonder) => {
+      res.redirect('/wonders')
+    })
+})
+
 router.delete('/:id', (req, res) => {
     Wonder.findByIdAndRemove(req.params.id, (err, wonder) => {
         res.redirect('/wonders')

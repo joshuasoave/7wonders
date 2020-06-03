@@ -6,21 +6,21 @@
   </head>
   <body>
     <h1>Edit <%=wonder.name%></h1>
-    <form action="/wonders/new" method="POST">
+    <form action="/wonders/<%=wonder.id%>?_method=PUT" method="POST">
       <fieldset>
         <legend>Wonder Basic Info</legend>
         <label for="name">Name</label>
-        <input type="text" name="name">
+        <input type="text" name="name" value="<%=wonder.name%>">
         <label for="location">Location</label>
-        <input type="text" name="location">
+        <input type="text" name="location" value="<%=wonder.location%>">
         <label>Year Built</label>
-        <input type="text" name="year">
+        <input type="text" name="year" value="<%=wonder.year%>">
       </fieldset>
       <fieldset>
         <legend>Wonder Description</legend>
-        <textarea name="description" rows="8" cols="80"></textarea>
+        <textarea name="description" rows="8" cols="80"><%=wonder.description%></textarea>
         <legend>Image Link</legend>
-        <input type="text" name="img">
+        <input type="text" name="img" value="<%=wonder.img%>">
       </fieldset>
       <fieldset>
         <input type="submit" value="Submit">
