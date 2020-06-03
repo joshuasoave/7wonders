@@ -22,4 +22,12 @@ router.post('/new', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+    Wonder.findById(req.params.id, (err, foundWonder) => {
+        res.render('show.ejs', {
+            wonder: foundWonder
+        })
+    })
+})
+
 module.exports = router
