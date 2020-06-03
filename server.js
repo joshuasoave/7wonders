@@ -16,7 +16,6 @@ const MONGODB_URI = process.env.MONGODB_URI
 mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
 )
 
-
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
@@ -25,13 +24,12 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //middleware
 //use public for static
 app.use(express.static('public'))
-
 //populates req.body with parsed info
 app.use(express.urlencoded({extended: false}))
 //method override
 app.use(methodOverride('_method'))
 
-//specifying controller 
+//specifying controller
 const wondersController = require('./controllers/wonders.js')
 app.use('/wonders', wondersController)
 

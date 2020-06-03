@@ -14,7 +14,7 @@ router.get('/new', (req, res) => {
 
 router.post('/new', (req, res) => {
     Wonder.create(req.body, (err, newWonder) => {
-        res.send(newWonder)
+        res.redirect('/wonders')
     })
 })
 
