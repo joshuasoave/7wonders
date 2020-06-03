@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit <%=wonder.name%></h1>
+    <form action="/wonders/new" method="POST">
+      <fieldset>
+        <legend>Wonder Basic Info</legend>
+        <label for="name">Name</label>
+        <input type="text" name="name">
+        <label for="location">Location</label>
+        <input type="text" name="location">
+        <label>Year Built</label>
+        <input type="text" name="year">
+      </fieldset>
+      <fieldset>
+        <legend>Wonder Description</legend>
+        <textarea name="description" rows="8" cols="80"></textarea>
+        <legend>Image Link</legend>
+        <input type="text" name="img">
+      </fieldset>
+      <fieldset>
+        <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+    <form action="/wonders" method="GET">
+      <input type="submit" value="Back">
+    </form>
+  </body>
+</html>

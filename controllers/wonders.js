@@ -22,6 +22,14 @@ router.post('/new', (req, res) => {
     })
 })
 
+router.get('/:id/edit', (req, res) => {
+    Wonder.findById(req.params.id, (err, foundWonder) => {
+        res.render('edit.ejs', {
+          wonder: foundWonder
+        })
+    })
+})
+
 router.delete('/:id', (req, res) => {
     Wonder.findByIdAndRemove(req.params.id, (err, wonder) => {
         res.redirect('/wonders')
