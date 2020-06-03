@@ -31,11 +31,9 @@ app.use(express.urlencoded({extended: false}))
 //method override
 app.use(methodOverride('_method'))
 
-//routes
-//local host
-app.get('/', (req, res) => {
-    res.send('Hello world')
-})
+//specifying controller 
+const wondersController = require('./controllers/wonders.js')
+app.use('/wonders', wondersController)
 
 //listener
 app.listen(PORT, () => {
