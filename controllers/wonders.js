@@ -5,7 +5,11 @@ const Wonder = require('../models/wonders.js')
 //routes
 //local host
 router.get('/', (req, res) => {
-    res.send('Hello world')
+    Wonder.find({}, (err, allWonders) => {
+        res.render('index.ejs', {
+          wonders: allWonders
+        })
+    })
 })
 
 router.get('/new', (req, res) => {
