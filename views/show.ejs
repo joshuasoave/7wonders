@@ -11,6 +11,11 @@
       <p>Built in <%=wonder.year%></p>
       <img src="<%=wonder.img%>" alt="a picture of  <%=wonder.name%>">
       <p><%=wonder.description%></p>
+      <div class="wonder-btns">
+        <form action="/wonders/<%=wonder.id%>?_method=DELETE" method="POST">
+          <input type="submit" value="Delete">
+        </form>
+      </div>
     </div>
     <form action="/wonders" method="GET">
       <input type="submit" value="Back">
