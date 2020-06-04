@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <nav>
+      <% if (currentUser) {%>
+          <p>Welcome, <%=currentUser.username%></p>
+          <form action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Logout">
+          </form>
+      <%} else{%>
+      <a href="/users/new">Create an account</a>
+      <form action="/sessions/new" method="GET">
+        <input type="submit" value="Login">
+      </form>
+      <%}%>
+    </nav>
+    <h1>20 Wonders of 2020</h1>
+    <p>Welcome! Please create and account or login to vote for the new world wonders of 2020.</p>
+  </body>
+</html>

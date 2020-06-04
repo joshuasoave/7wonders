@@ -54,7 +54,11 @@ app.use('/users', userController)
 //sessions controller
 app.use('/sessions', sessionsController)
 
-
+app.get('/', (req, res) => {
+    res.render('splash.ejs', {
+      currentUser: req.session.currentUser
+  })
+})
 //listener
 app.listen(PORT, () => {
   console.log('listening on port:', PORT);
