@@ -38,10 +38,6 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: false}))
 //method override
 app.use(methodOverride('_method'))
-//wonders controller and wonders path
-app.use('/wonders', wondersController)
-//users path and controller
-app.use('/users', userController)
 //sessions path
 app.use(
   session({
@@ -50,6 +46,11 @@ app.use(
     saveUnitialized: false
   })
 )
+//wonders controller and wonders path
+app.use('/wonders', wondersController)
+//users path and controller
+app.use('/users', userController)
+
 //sessions controller
 app.use('/sessions', sessionsController)
 

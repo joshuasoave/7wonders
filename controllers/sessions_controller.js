@@ -4,7 +4,9 @@ const sessions = express.Router()
 const User = require('../models/users.js')
 
 sessions.get('/new', (req, res) => {
-    res.render('sessions/new.ejs', {currentUser: req.session.currentUser})
+    res.render('sessions/new.ejs', {
+      currentUser: req.session.currentUser
+    })
 })
 
 sessions.post('/', (req, res) => {
@@ -17,7 +19,7 @@ sessions.post('/', (req, res) => {
       } else {
             if(bcrypt.compareSync(req.body.password, foundUser.password)) {
               req.session.currentUser = foundUser
-              res.redirect('/')
+              res.redirect('/wonders')
             } else {
               res.send('Sorry, incorrect username or password')
             }
@@ -27,7 +29,7 @@ sessions.post('/', (req, res) => {
 
 sessions.delete('/', (req, res) => {
     req.session.destroy(() => {
-        res.redirect('/')
+        res.redirect('/wonders')
     })
 })
 

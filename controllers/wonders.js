@@ -7,13 +7,16 @@ const Wonder = require('../models/wonders.js')
 router.get('/', (req, res) => {
     Wonder.find({}, (err, allWonders) => {
         res.render('index.ejs', {
-          wonders: allWonders
+          wonders: allWonders,
+          currentUser: req.session.currentUser
         })
     })
 })
 
 router.get('/new', (req, res) => {
-    res.render('new.ejs')
+    res.render('new.ejs', {
+      currentUser: req.session.currentUser
+    })
 })
 
 router.post('/new', (req, res) => {
@@ -25,7 +28,8 @@ router.post('/new', (req, res) => {
 router.get('/:id/edit', (req, res) => {
     Wonder.findById(req.params.id, (err, foundWonder) => {
         res.render('edit.ejs', {
-          wonder: foundWonder
+          wonder: foundWonder,
+          currentUser: req.session.currentUser
         })
     })
 })
@@ -45,7 +49,8 @@ router.delete('/:id', (req, res) => {
 router.get('/:id', (req, res) => {
     Wonder.findById(req.params.id, (err, foundWonder) => {
         res.render('show.ejs', {
-            wonder: foundWonder
+            wonder: foundWonder,
+            currentUser: req.session.currentUser
         })
     })
 })
