@@ -7,4 +7,13 @@ users.get('/new', (req, res) => {
     res.render('users/new.ejs')
 })
 
+users.post('/', (req, res) => {
+    //use a hashed password for the users password
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+    User.create(req.body, (err, createdUser) => {
+        console.log('user is created', createdUser)
+        res.redirect('/wonders')
+    })
+})
+
 module.exports = users

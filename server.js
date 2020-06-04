@@ -4,7 +4,7 @@ const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const app = express()
 const db = mongoose.connection
-const session = require('express')
+const session = require('express-session')
 const bcrypt = require('bcrypt')
 require('dotenv').config()
 
@@ -23,23 +23,35 @@ db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
-//middleware
+//controllers//
+//controller for users
+const userController = require('./controllers/users_controller.js')
+//specifying controller for wonders
+const wondersController = require('./controllers/wonders.js')
+//controller for sessions
+const sessionsController = require('./controllers/sessions_controller.js')
+
+//middleware//
 //use public for static
 app.use(express.static('public'))
 //populates req.body with parsed info
 app.use(express.urlencoded({extended: false}))
 //method override
 app.use(methodOverride('_method'))
-
-//controller for users
-const userController = require('./controllers/users_controller.js')
-app.use('/users', userController)
-
-//specifying controller for wonders
-const wondersController = require('./controllers/wonders.js')
-
+//wonders controller and wonders path
 app.use('/wonders', wondersController)
-
+//users path and controller
+app.use('/users', userController)
+//sessions path
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUnitialized: false
+  })
+)
+//sessions controller
+app.use('/sessions', sessionsController)
 
 
 //listener
