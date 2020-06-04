@@ -4,6 +4,8 @@ const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const app = express()
 const db = mongoose.connection
+const session = require('express')
+const bcrypt = require('bcrypt')
 require('dotenv').config()
 
 //port
@@ -29,9 +31,16 @@ app.use(express.urlencoded({extended: false}))
 //method override
 app.use(methodOverride('_method'))
 
-//specifying controller
+//controller for users
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
+
+//specifying controller for wonders
 const wondersController = require('./controllers/wonders.js')
+
 app.use('/wonders', wondersController)
+
+
 
 //listener
 app.listen(PORT, () => {
