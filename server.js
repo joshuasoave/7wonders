@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3333
 
 //database
 const MONGODB_URI = process.env.MONGODB_URI
+const SECRET = process.env.SECRET
 
 //fix deprectiation warnings
 mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }

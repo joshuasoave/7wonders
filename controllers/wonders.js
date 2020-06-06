@@ -102,4 +102,6 @@ router.get('/:id', isAuthenticated, (req, res) => {
 //     res.redirect('/wonders')
 // })
 
+//seed data for the campaign
+
 module.exports = router
