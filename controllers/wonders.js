@@ -37,7 +37,7 @@ router.get('/original', (req, res) => {
 
 router.get('/original/:id', (req, res) => {
     Original7.findById(req.params.id, (err, foundWonder) => {
-        res.render('show.ejs', {
+        res.render('7wonders/7wondersshow.ejs', {
             wonder: foundWonder,
             currentUser: req.session.currentUser
         })
@@ -96,6 +96,7 @@ router.get('/:id', isAuthenticated, (req, res) => {
     })
 })
 
+//seed data for the original 7 wonders
 // router.get('/original7/seed', (req, res) => {
 //     Original7.create(sevenWonders)
 //     res.redirect('/wonders')
