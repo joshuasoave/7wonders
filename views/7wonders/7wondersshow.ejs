@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="wonder-show">
+      <h1><%=wonder.name%></h1>
+      <p><%=wonder.location%></p>
+      <p>Built in <%=wonder.year%></p>
+      <img src="<%=wonder.img%>" alt="a picture of  <%=wonder.name%>">
+      <p><%=wonder.description%></p>
+    </div>
+    <form action="/wonders" method="GET">
+      <input type="submit" value="Back">
+    </form>
+  </body>
+</html>

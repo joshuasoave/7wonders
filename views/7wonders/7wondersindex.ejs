@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Wonders</title>
   </head>
   <body>
     <nav>
@@ -17,9 +17,14 @@
         <input type="submit" value="Login">
       </form>
       <%}%>
-      <a href="/wonders/original">Current Wonders</a>
+      <a href="/">Back to Home</a>
     </nav>
-    <h1>20 Wonders of 2020</h1>
-    <p>Welcome! Please create and account or login to vote for the new world wonders of 2020.</p>
+    <a href="/wonders/new">Create a new wonder</a>
+    <h1>Original 7 Wonders</h1>
+    <% for(let i = 0; i < original7.length; i++){%>
+          <h3><%=original7[i].name%></h3>
+          <p><%=original7[i].location%></p>
+          <a href="/wonders/original/<%=original7[i].id%>"><img src="<%=original7[i].img%>" alt="picture of <%=original7[i].name%>"></a>
+    <%}%>
   </body>
 </html>

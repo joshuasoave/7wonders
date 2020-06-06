@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const Wonder = require('../models/wonders.js')
+const Original7 = require('../models/og7.js')
+const sevenWonders = require('../seed/og7.js')
 
 const isAuthenticated = (req, res, next) => {
   if (req.session.currentUser) {
@@ -20,6 +22,24 @@ router.get('/', isAuthenticated, (req, res) => {
         res.render('index.ejs', {
           wonders: allWonders,
           currentUser: req.session.currentUser
+        })
+    })
+})
+
+router.get('/original', (req, res) => {
+    Original7.find({}, (err, allWonders) => {
+    res.render('7wonders/7wondersindex.ejs', {
+      original7: allWonders,
+      currentUser: req.session.currentUser
+    })
+  })
+})
+
+router.get('/original/:id', (req, res) => {
+    Original7.findById(req.params.id, (err, foundWonder) => {
+        res.render('show.ejs', {
+            wonder: foundWonder,
+            currentUser: req.session.currentUser
         })
     })
 })
@@ -75,5 +95,10 @@ router.get('/:id', isAuthenticated, (req, res) => {
         })
     })
 })
+
+// router.get('/original7/seed', (req, res) => {
+//     Original7.create(sevenWonders)
+//     res.redirect('/wonders')
+// })
 
 module.exports = router
