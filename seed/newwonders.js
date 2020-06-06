@@ -5,50 +5,50 @@ const newWonders = [
   {
     name: 'Alhambra',
     location: `Granada, Spain`,
-    year: '5th Century BC',
-    description: 'Petra is a stunning city carved into red sandstone rock of the surrounding mountains. This area served as a commercial hub for trade caravans form all across the region.',
-    img: 'https://whc.unesco.org/uploads/thumbs/site_0326_0004-500-333-20151104133419.jpg'
+    year: '889 AD',
+    description: 'Originally built as a fortress, Alhambra was converted into a palace by Sultan Yusuf of Granada. It later served as the site of Royal Court for Spanish Monarchs Ferdinand and Isabella.',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg/1920px-Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg
   },
   {
-    name: 'Taj Mahal',
-    location: `Agra, Uttar Pradesh, India`,
-    year: '1634 AD',
-    description: 'A Mausoleum built by emperor Shah Jahan for his favorite wife Mumtaz Mahal. The Taj Mahal is a masterpiece of symmetry and instantly recognizable with its domed structures.',
-    img: 'https://discovery.sndimg.com/content/dam/images/discovery/fullset/2020/2/21/Getty%20Images.jpg.rend.hgtvcom.406.406.suffix/1582329409187.jpeg'
+    name: 'Potola Palace',
+    location: `Lhasa, Tibet`,
+    year: '637 AD',
+    description: 'The Potola Palace is considered a holy site and no buildings in the area are allowed to built taller than it. This site served as a winter palace for the Dhali Lama and is important to Tibetan Buddhism.',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/%E5%B8%83%E8%BE%BE%E6%8B%89%E5%AE%AB.jpg/1920px-%E5%B8%83%E8%BE%BE%E6%8B%89%E5%AE%AB.jpg'
   },
   {
-    name: 'Colosseum',
-    location: `Rome, Italy`,
-    year: '80 AD',
-    description: 'At the time of its construction, the Colosseum was considered the largest ampitheatre ever built. It was used for gladiator contests and public spectacles of the Roman Empire.',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg'
+    name: 'Alcázar of Segovia',
+    location: `Segovia, Spain`,
+    year: '1155 AD',
+    description: `This famous castle is said to be the inspiration for Cinderella's castle. It was orginially built as a military fortress, but also served as a royal palace and prison over the years.`,
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Segovia_-_Alc%C3%A1zar_de_Segovia_22_2017-10-24.jpg/660px-Segovia_-_Alc%C3%A1zar_de_Segovia_22_2017-10-24.jpg'
   },
   {
-    name: 'Christ The Redeemer',
-    location: `Rio de Janeiro, Brazil`,
-    year: '1931 AD',
-    description: `At almost 100 ft high, this state of Jesus Christ towers over the city of Rio De Janeiro. This symbolic statue is considered to be one of Rio de Janeiro's most recognizable landmarks`,
-    img: 'https://www.wonders-of-the-world.net/Christ-the-Redeemer/images/Vignettes/Statue/Christ-redempteur-V.jpg'
+    name: 'Sistine Chapel',
+    location: `Vatican City`,
+    year: '1483 AD',
+    description: `The Sistine Chapel is famous for its iconic frescos painted by artists such as Michelangelo. Today, it serves as a papal conclave where cardinals elect the next pope.`,
+    img: 'https://theromanguy.com/wp-content/uploads/Sistine-Chapel.jpg'
   },
   {
-    name: 'Great Wall of China',
-    location: `China`,
-    year: '700 BC',
-    description: `The Great Wall of China refers to a collection of fortifiaction systems. While the earliest section was built in 700 BC, the most recognizable sections were built from 1368-1644 AD.`,
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/1920px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg'
+    name: 'Angkor Wat',
+    location: `Siem Reap, Cambodia`,
+    year: '12th Century AD',
+    description: `Angkor Wat was originall built as a temple to the Hindu god Vishnu, but eventually served as a Buddhist temple. It was built by King Suryavarman II of the Khmer Empire.`,
+    img: 'https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc5MDg3MjM5Mjc1ODQ5/an-aerial-view-of-the-angkor-wat-temple-2.jpg'
   },
   {
-    name: 'Chichen Itza',
-    location: `Yucatán, Mexico`,
-    year: '600 AD',
-    description: `Chichen Itza was one of the most populous Mayan cities. The most recognizable building is the Temple of Kukulcan. It was built to honor the great feathered serpent diety.`,
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Chichen_Itza_%283326547826%29.jpg/500px-Chichen_Itza_%283326547826%29.jpg'
+    name: `Saint Basil's Cathedral`,
+    location: `Moscow, Russia`,
+    year: '1561',
+    description: `This unique building is regarded as a cultural symbol of Russia. During the Soviet Union's secularization campaigns, the church was confiscated from the Russian Orthodox followers. Weekly services were restored in 1997.`,
+    img: 'https://pradiz.com/wp-content/uploads/2018/09/nikolay-vorobyev-jaH3QF46gAY-unsplash.jpg'
   },
   {
-    name: 'Machu Pichu',
-    location: `Cuzco, Peru`,
-    year: '1450',
-    description: `Machu Pichu is a famous Incan monument thought to be have been built for emperor Pachacuti. The Inca managed a great feat of engineering by building terrace farms on the side of the mountain.`,
-    img: 'https://i.guim.co.uk/img/media/b56952349419f749667d43f38b4d05e2980821a2/0_176_6016_3611/master/6016.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=d1d59c0c9b0e70e1da5989902cf5f01c'
+    name: 'Moai',
+    location: `Easter Island`,
+    year: '1250-1500 AD',
+    description: `Moai are stone figures carved by the Rapa Nui people to resemble human faces. They were carved in honor of diefied ancestors. The construction of these stone statues are a feat of engineering.`,
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/AhuTongariki.JPG/660px-AhuTongariki.JPG'
   },
 ]
