@@ -15,7 +15,13 @@
     <h1>20 Wonders of 2020</h1>
     <% for(let i = 0; i < wonders.length; i++){%>
           <h3><%=wonders[i].name%></h3>
-          <p><%=wonders[i].location%></p>
+          <div class="">
+            <p><%=wonders[i].location%></p>
+            <p>Votes: <%=wonders[i].votes%></p>
+            <form action="/wonders/<%=wonders[i].id%>/vote?_method=PUT" method="POST">
+              <input type="submit" value="Vote">
+            </form>
+          </div>
           <a href="/wonders/<%=wonders[i].id%>"><img src="<%=wonders[i].img%>" alt="picture of <%=wonders[i].name%>"></a>
     <%}%>
   </body>

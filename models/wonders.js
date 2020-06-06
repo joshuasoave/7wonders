@@ -6,7 +6,8 @@ const wonderSchema = new Schema({
       location: {type: String, required: true},
       year: String,
       description: String,
-      img: String
+      img: String,
+      votes: {type: Number, default: 0}
 })
 
 const Wonder = mongoose.model('Wonder', wonderSchema)

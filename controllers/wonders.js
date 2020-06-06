@@ -2,9 +2,17 @@ const express = require('express')
 const router = express.Router()
 const Wonder = require('../models/wonders.js')
 
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
 //routes
 //local host
-router.get('/', (req, res) => {
+router.get('/', isAuthenticated, (req, res) => {
     Wonder.find({}, (err, allWonders) => {
         res.render('index.ejs', {
           wonders: allWonders,
@@ -13,7 +21,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
     res.render('new.ejs', {
       currentUser: req.session.currentUser
     })
@@ -25,12 +33,22 @@ router.post('/new', (req, res) => {
     })
 })
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', isAuthenticated, (req, res) => {
     Wonder.findById(req.params.id, (err, foundWonder) => {
         res.render('edit.ejs', {
           wonder: foundWonder,
           currentUser: req.session.currentUser
         })
+    })
+})
+
+router.put('/:id/vote', isAuthenticated, (req, res) => {
+    Wonder.findByIdAndUpdate(req.params.id,
+      //increments the number of votes for found id by 1
+      {$inc: {'votes': + 1}},
+      (err, foundWonder) => {
+        //send back to index
+        res.redirect('/wonders/')
     })
 })
 
@@ -46,7 +64,7 @@ router.delete('/:id', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
+router.get('/:id', isAuthenticated, (req, res) => {
     Wonder.findById(req.params.id, (err, foundWonder) => {
         res.render('show.ejs', {
             wonder: foundWonder,
