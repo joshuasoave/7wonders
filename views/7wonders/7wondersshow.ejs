@@ -13,14 +13,22 @@
       </nav>
     </header>
     <div class="container">
-      <h1><%=wonder.name%></h1>
-      <p><%=wonder.location%></p>
-      <p>Built in <%=wonder.year%></p>
-      <img src="<%=wonder.img%>" alt="a picture of  <%=wonder.name%>">
-      <p><%=wonder.description%></p>
-      <form action="/wonders/original" method="GET">
-        <input type="submit" value="Back">
-      </form>
+      <div class="wonder-show">
+        <div class="show-header">
+          <h1><%=wonder.name%></h1>
+          <p><%=wonder.location%></p>
+          <p>Built in <%=wonder.year%></p>
+        </div>
+        <img src="<%=wonder.img%>" alt="a picture of  <%=wonder.name%>">
+        <div class="description">
+          <p><%=wonder.description%></p>
+        </div>
+        <div class="wonder-btns">
+          <form action="/wonders/original" method="GET">
+            <input type="submit" value="Back" class="btn btn-secondary">
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>

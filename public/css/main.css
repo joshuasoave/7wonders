@@ -6,6 +6,8 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+/* header and nav */
+
 header {
   background: blanchedalmond;
 }
@@ -19,6 +21,10 @@ nav a {
   max-width: 170px;
 }
 
+#vote:hover {
+  background: rgba(147, 112, 219, .7)
+}
+
 #home {
   order: -1;
 }
@@ -29,11 +35,23 @@ header h1 {
   font-family: 'Alata', sans-serif;
 }
 
+/* login/logout button area  */
+
 .logout, .login {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
+  margin-left: 1em;
+}
+
+#login, #logout {
+  margin-top: -2em;
+}
+
+#login:hover, #logout:hover{
+  background: indigo;
+  color: white;
 }
 
 .btn-sm {
@@ -42,10 +60,14 @@ header h1 {
   border: 1px solid indigo;
 }
 
+/* wonder index page style */
+
 .wonder-index {
-  height: 300px;
+  height: 280px;
   width: 350px;
   margin: 3em;
+  margin-bottom: 4em;
+  box-shadow: 3px 6px goldenrod;
 }
 
 .wonder-header {
@@ -64,4 +86,80 @@ header h1 {
   height: 100%;
   border: 3px solid indigo;
   border-top: 0;
+}
+
+/* voting section */
+
+.votes {
+  background: blanchedalmond;
+  display: flex;
+  border: 3px solid indigo;
+  border-top: 0;
+  justify-content: space-between;
+}
+
+.votes h5 {
+  font-weight: 600;
+  margin: .1em;
+}
+
+#vote-btn {
+  background: indigo;
+  color: white;
+  width: 70px;
+  border-radius: 0;
+}
+
+#vote-btn:hover {
+  background: rgba(147, 112, 219, .7);
+  border-color: rgba(147, 112, 219, .7);
+}
+
+/* wonder show page  */
+
+.wonder-show {
+  margin-top: 2em;
+}
+
+.wonder-show img {
+  height: 300px;
+  width: 100%;
+  border: 3px solid goldenrod;
+  border-bottom: 0;
+}
+
+.description {
+  background: white;
+  border: 3px solid goldenrod;
+  border-top: 0;
+}
+
+.description p {
+  margin: .3em;
+  margin-top: 0;
+}
+
+.wonder-btns {
+  display: flex;
+  margin-top: 1em;
+}
+
+.btn-primary {
+  background: indigo;
+  border: 0;
+  margin-right: 1em;
+}
+
+.btn-primary:hover {
+  background: rgba(147, 112, 219, .7);
+}
+
+.btn-secondary {
+  background: goldenrod;
+  border: 0;
+  margin-right: 1em;
+}
+
+.btn-secondary:hover {
+  background: gold;
 }

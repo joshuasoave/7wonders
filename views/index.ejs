@@ -25,9 +25,9 @@
               <a href="/wonders/<%=wonders[i].id%>"><img src="<%=wonders[i].img%>" alt="picture of <%=wonders[i].name%>" class="img-wonder"></a>
           </div>
           <div class="votes">
-            <p>Votes: <%=wonders[i].votes%></p>
+            <h5>Votes: <%=wonders[i].votes%></h5>
             <form action="/wonders/<%=wonders[i].id%>/vote?_method=PUT" method="POST">
-              <input type="submit" value="Vote">
+              <input type="submit" value="Vote" class="btn btn-sm" id="vote-btn">
             </form>
           </div>
         </div>
