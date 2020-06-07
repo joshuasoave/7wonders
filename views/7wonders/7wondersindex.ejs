@@ -5,11 +5,14 @@
     <title>The 7 Wonders of the World</title>
   </head>
   <body>
-    <nav>
-      <%- include('../partials/nav.ejs') %>
-    </nav>
+    <header>
+      <%- include('../partials/logout.ejs') %>
+      <h1>7 Wonders of the World</h1>
+      <nav>
+        <%- include('../partials/nav.ejs') %>
+      </nav>
+    </header>
     <div class="container">
-      <h1>Original 7 Wonders</h1>
       <% for(let i = 0; i < original7.length; i++){%>
             <h3><%=original7[i].name%></h3>
             <p><%=original7[i].location%></p>

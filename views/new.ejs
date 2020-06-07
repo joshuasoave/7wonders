@@ -5,11 +5,14 @@
     <title>Submit a new wonder</title>
   </head>
   <body>
-    <nav>
-      <%- include('./partials/nav.ejs') %>
-    </nav>
-    <div class="container">
+    <header>
+      <%- include('./partials/logout.ejs') %>
       <h1>Submit a wonder</h1>
+      <nav>
+        <%- include('./partials/nav.ejs') %>
+      </nav>
+    </header>
+    <div class="container">
       <form action="/wonders/new" method="POST">
         <fieldset>
           <legend>Wonder Basic Info</legend>

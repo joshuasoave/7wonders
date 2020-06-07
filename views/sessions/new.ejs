@@ -4,10 +4,12 @@
     <%- include('../partials/head.ejs') %>
   </head>
   <body>
-    <nav>
-      <%- include('../partials/nav.ejs') %>
-    </nav>
-    <h1>Login</h1>
+    <header>
+      <h1>Login</h1>
+      <nav>
+        <%- include('../partials/nav.ejs') %>
+      </nav>
+    </header>
     <form action="/sessions" method="POST">
       <label>Username:</label>
       <input type="text" name="username">

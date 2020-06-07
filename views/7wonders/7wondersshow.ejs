@@ -5,9 +5,13 @@
     <title><%=wonder.name%></title>
   </head>
   <body>
-    <nav>
-      <%- include('../partials/nav.ejs') %>
-    </nav>
+    <header>
+      <%- include('../partials/logout.ejs') %>
+      <h1>7 Wonders of the World</h1>
+      <nav>
+        <%- include('../partials/nav.ejs') %>
+      </nav>
+    </header>
     <div class="container">
       <h1><%=wonder.name%></h1>
       <p><%=wonder.location%></p>

@@ -2,11 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <%- include('../partials/head.ejs') %>
+    <title>Create an account</title>
   </head>
   <body>
-    <nav>
-      <%- include('../partials/nav.ejs') %>
-    </nav>
+    <header>
+      <%- include('../partials/logout.ejs') %>
+      <h1>Create an account</h1>
+      <nav>
+        <%- include('../partials/nav.ejs') %>
+      </nav>
+    </header>
     <div class="container">
       <form action="/users" method="POST">
         <label for="name">Username:</label>

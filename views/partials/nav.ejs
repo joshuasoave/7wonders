@@ -1,28 +1,21 @@
   <% if (currentUser) {%>
-      <p>Welcome, <%=currentUser.username%></p>
-      <form action="/sessions?_method=DELETE" method="POST">
-        <input type="submit" value="Logout">
-      </form>
-      <ul>
-        <li>
-          <a href="/wonders/new">Submit a new wonder</a>
+      <ul class="nav justify-content-center nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="/wonders/new">Submit a wonder</a>
         </li>
   <%} else{%>
-      <form action="/sessions/new" method="GET">
-          <input type="submit" value="Login">
-      </form>
-      <ul>
-        <li>
-          <a href="/users/new">Create an account</a>
+      <ul class="nav justify-content-center nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="/users/new">Create an account</a>
         </li>
   <%}%>
-    <li>
-      <a href="/wonders/original">New7Wonders of the World</a>
+    <li class="nav-item">
+      <a class="nav-link" href="/wonders/original">7Wonders</a>
     </li>
-    <li>
-      <a href="/">Home</a>
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
     </li>
-    <li>
-      <a href="/wonders">2020 World Wonder Candidates</a>
+    <li class="nav-item">
+      <a class="nav-link active" href="/wonders">Vote</a>
     </li>
   </ul>

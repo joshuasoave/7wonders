@@ -5,11 +5,14 @@
     <title>Edit <%=wonder.name%></title>
   </head>
   <body>
-    <nav>
-      <%- include('./partials/nav.ejs') %>
-    </nav>
-    <div class="container">
+    <header>
+      <%- include('./partials/logout.ejs') %>
       <h1>Edit <%=wonder.name%></h1>
+      <nav>
+        <%- include('./partials/nav.ejs') %>
+      </nav>
+    </header>
+    <div class="container">
       <form action="/wonders/<%=wonder.id%>?_method=PUT" method="POST">
         <fieldset>
           <legend>Wonder Basic Info</legend>
