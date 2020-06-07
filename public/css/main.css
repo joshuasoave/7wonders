@@ -1,5 +1,23 @@
+body {
+  background: rgba(147, 112, 219, .3);
+  color: indigo;
+}
+
+header {
+  background: blanchedalmond;
+}
+
+nav a {
+  color: indigo;
+}
+
+#vote {
+  background: indigo;
+}
+
 header h1 {
   text-align: center;
+  color: indigo;
 }
 
 .logout, .login {
@@ -7,4 +25,10 @@ header h1 {
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
+}
+
+.btn-sm {
+  background: rgba(147, 112, 219, .3);
+  color: indigo;
+  border: 1px solid indigo;
 }
