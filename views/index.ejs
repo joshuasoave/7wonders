@@ -5,11 +5,15 @@
     <title>20 Wonders Campaign</title>
   </head>
   <body>
-    <nav>
-      <%- include('./partials/nav.ejs') %>
-    </nav>
-    <a href="/wonders/new">Create a new wonder</a>
-    <h1>20 Wonders of 2020</h1>
+    <div class="heder">
+      <header>
+        <h1>20 Wonders of 2020</h1>
+        <nav>
+          <%- include('./partials/nav.ejs') %>
+        </nav>
+      </header>
+    </div>
+    <div class="container">
     <% for(let i = 0; i < wonders.length; i++){%>
           <h3><%=wonders[i].name%></h3>
           <div class="">
@@ -21,5 +25,6 @@
           </div>
           <a href="/wonders/<%=wonders[i].id%>"><img src="<%=wonders[i].img%>" alt="picture of <%=wonders[i].name%>"></a>
     <%}%>
+    </div>
   </body>
 </html>

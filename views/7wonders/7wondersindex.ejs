@@ -8,12 +8,13 @@
     <nav>
       <%- include('../partials/nav.ejs') %>
     </nav>
-    <a href="/wonders/new">Create a new wonder</a>
-    <h1>Original 7 Wonders</h1>
-    <% for(let i = 0; i < original7.length; i++){%>
-          <h3><%=original7[i].name%></h3>
-          <p><%=original7[i].location%></p>
-          <a href="/wonders/original/<%=original7[i].id%>"><img src="<%=original7[i].img%>" alt="picture of <%=original7[i].name%>"></a>
-    <%}%>
+    <div class="container">
+      <h1>Original 7 Wonders</h1>
+      <% for(let i = 0; i < original7.length; i++){%>
+            <h3><%=original7[i].name%></h3>
+            <p><%=original7[i].location%></p>
+            <a href="/wonders/original/<%=original7[i].id%>"><img src="<%=original7[i].img%>" alt="picture of <%=original7[i].name%>"></a>
+      <%}%>
+    </div>
   </body>
 </html>
