@@ -3,6 +3,7 @@ const router = express.Router()
 const Wonder = require('../models/wonders.js')
 const Original7 = require('../models/og7.js')
 const sevenWonders = require('../seed/og7.js')
+const newWonders = require('../seed/newwonders.js')
 
 const isAuthenticated = (req, res, next) => {
   if (req.session.currentUser) {
@@ -16,7 +17,7 @@ const isAuthenticated = (req, res, next) => {
 //local host
 router.get('/', isAuthenticated, (req, res) => {
   //sorts the wonders in descending order so you can see who is winning
-  //https://stackoverflow.com/questions/4299991/how-to-sort-in-mongoose
+  // https://stackoverflow.com/questions/4299991/how-to-sort-in-mongoose
   //without the null it gives me property undefined
     Wonder.find({}, null, {sort: {votes: -1}}, (err, allWonders) => {
         res.render('index.ejs', {
@@ -25,6 +26,7 @@ router.get('/', isAuthenticated, (req, res) => {
         })
     })
 })
+
 
 router.get('/original', (req, res) => {
     Original7.find({}, (err, allWonders) => {
@@ -102,6 +104,6 @@ router.get('/:id', isAuthenticated, (req, res) => {
 //     res.redirect('/wonders')
 // })
 
-//seed data for the campaign
+
 
 module.exports = router
