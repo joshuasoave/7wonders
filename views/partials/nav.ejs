@@ -1,10 +1,10 @@
   <% if (currentUser) {%>
-      <ul class="nav justify-content-center nav-pills">
+      <ul class="nav justify-content-around nav-fill nav-pills">
         <li class="nav-item">
           <a class="nav-link" href="/wonders/new">Submit a wonder</a>
         </li>
   <%} else{%>
-      <ul class="nav justify-content-center nav-pills">
+      <ul class="nav justify-content-around nav-fill nav-pills">
         <li class="nav-item">
           <a class="nav-link" href="/users/new">Create an account</a>
         </li>
@@ -12,7 +12,7 @@
     <li class="nav-item">
       <a class="nav-link" href="/wonders/original">7Wonders</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="home">
       <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">

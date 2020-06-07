@@ -14,9 +14,15 @@
     </header>
     <div class="container">
       <% for(let i = 0; i < original7.length; i++){%>
+        <div class="wonder-index">
+          <div class="wonder-header">
             <h3><%=original7[i].name%></h3>
             <p><%=original7[i].location%></p>
-            <a href="/wonders/original/<%=original7[i].id%>"><img src="<%=original7[i].img%>" alt="picture of <%=original7[i].name%>"></a>
+          </div>
+          <div class="index-img">
+              <a href="/wonders/original/<%=original7[i].id%>"><img src="<%=original7[i].img%>" alt="picture of <%=original7[i].name%>" class="img-wonder"></a>
+          </div>
+        </div>
       <%}%>
     </div>
   </body>
