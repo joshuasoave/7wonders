@@ -1,0 +1,25 @@
+  <% if (currentUser) {%>
+      <p>Welcome, <%=currentUser.username%></p>
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Logout">
+      </form>
+      <ul>
+        <li>
+          <a href="/wonders/new">Create a new wonder</a>
+        </li>
+  <%} else{%>
+      <form action="/sessions/new" method="GET">
+          <input type="submit" value="Login">
+      </form>
+      <ul>
+        <li>
+          <a href="/users/new">Create an account</a>
+        </li>
+  <%}%>
+    <li>
+      <a href="/wonders/original">Current Wonders</a>
+    </li>
+    <li>
+      <a href="/">Home</a>
+    </li>
+  </ul>

@@ -2,8 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <%- include('./partials/head.ejs') %>
+    <title><%=wonder.name%></title>
   </head>
   <body>
+    <nav>
+      <%- include('./partials/nav.ejs') %>
+    </nav>
     <div class="wonder-show">
       <h1><%=wonder.name%></h1>
       <p><%=wonder.location%></p>

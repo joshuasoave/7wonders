@@ -2,21 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
       <%- include('./partials/head.ejs') %>
+      <title>20 Wonders Campaign</title>
   </head>
   <body>
     <nav>
-      <% if (currentUser) {%>
-          <p>Welcome, <%=currentUser.username%></p>
-          <form action="/sessions?_method=DELETE" method="POST">
-            <input type="submit" value="Logout">
-          </form>
-      <%} else{%>
-      <a href="/users/new">Create an account</a>
-      <form action="/sessions/new" method="GET">
-        <input type="submit" value="Login">
-      </form>
-      <%}%>
-      <a href="/wonders/original">Current Wonders</a>
+      <%- include('./partials/nav.ejs') %>
     </nav>
     <h1>20 Wonders of 2020</h1>
     <p>Welcome! Please create and account or login to vote for the new world wonders of 2020.</p>

@@ -2,8 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <%- include('./partials/head.ejs') %>
+    <title>Edit <%=wonder.name%></title>
   </head>
   <body>
+    <nav>
+      <%- include('./partials/nav.ejs') %>
+    </nav>
     <h1>Edit <%=wonder.name%></h1>
     <form action="/wonders/<%=wonder.id%>?_method=PUT" method="POST">
       <fieldset>

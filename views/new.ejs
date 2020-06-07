@@ -2,8 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <%- include('./partials/head.ejs') %>
+    <title>Submit a new wonder</title>
   </head>
   <body>
+    <nav>
+      <%- include('./partials/nav.ejs') %>
+    </nav>
     <h1>Submit a wonder</h1>
     <form action="/wonders/new" method="POST">
       <fieldset>

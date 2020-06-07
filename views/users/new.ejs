@@ -4,13 +4,15 @@
     <%- include('../partials/head.ejs') %>
   </head>
   <body>
+    <nav>
+      <%- include('../partials/nav.ejs') %>
+    </nav>
     <div class="container">
       <form action="/users" method="POST">
         <label for="name">Username:</label>
         <input type="text" name="username">
         <label for="pass">Password:</label>
         <input type="password" name="password">
-        <br>
         <input type="submit" value="Submit">
       </form>
     </div>
