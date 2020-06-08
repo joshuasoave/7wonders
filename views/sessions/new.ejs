@@ -5,20 +5,30 @@
   </head>
   <body>
     <header>
-      <h1>Login</h1>
+      <h1>20 Wonders of 2020</h1>
       <nav>
         <%- include('../partials/nav.ejs') %>
       </nav>
     </header>
-    <form action="/sessions" method="POST">
-      <label>Username:</label>
-      <input type="text" name="username">
-      <label>Password:</label>
-      <input type="password" name="password">
-      <br>
-      <input type="submit" value="Login">
+    <form action="/sessions" method="POST" id="login-form">
+      <h2>Login</h2>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Username:</label>
+          <input type="text" name="username" class="form-control">
+        </div>
+        <div class="form group col-md-6">
+          <label>Password:</label>
+          <input type="password" name="password" class="form-control">
+        </div>
+        <div class="form group col-md-6">
+          <input type="submit" value="Login" class="btn btn-primary" id="login-page-btn">
+        </div>
+      </div>
+      <div class="create-account">
+        <h4>Don't have an account?</h4>
+        <a href="/users/new">Create an account</a>
+      </div>
     </form>
-    <h4>Don't have an account?</h4>
-    <a href="/users/new">Create an account</a>
   </body>
 </html>
