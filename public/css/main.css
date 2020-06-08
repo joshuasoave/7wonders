@@ -207,3 +207,28 @@ header h1 {
 .create-account {
   margin-top: 2em;
 }
+
+/* smaller laptop screens  */
+@media only screen and (min-width: 740px) {
+
+  .splash-show {
+    text-align: center;
+    width: 100%;
+    height: 170px;
+  }
+}
+
+/* desktop style  */
+@media only screen and (min-width: 990px) {
+
+.splash-show {
+  text-align: center;
+  width: 80%;
+  height: 150px;
+}
+
+.splash-show p {
+  line-height: 2em;
+}
+
+}
