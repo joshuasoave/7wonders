@@ -251,6 +251,12 @@ header h1 {
     width: 100%;
   }
 
+  /* login section */
+  #login-form {
+    margin-left: 17%;
+    width: 100%;
+  }
+
 }
 
 /* desktop style  */
@@ -302,6 +308,11 @@ header h1 {
 #new-wonder, #edit-wonder {
   margin-left: 25%;
   width: 100%;
+}
+
+/* login page  */
+#login-form {
+  margin-left: 33%;
 }
 
 }

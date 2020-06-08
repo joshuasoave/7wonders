@@ -10,25 +10,29 @@
         <%- include('../partials/nav.ejs') %>
       </nav>
     </header>
-    <form action="/sessions" method="POST" id="login-form">
-      <h2>Login</h2>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label>Username:</label>
-          <input type="text" name="username" class="form-control">
+    <div class="login-section">
+      <form action="/sessions" method="POST" id="login-form">
+        <h2>Login</h2>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Username:</label>
+            <input type="text" name="username" class="form-control">
+          </div>
         </div>
-        <div class="form group col-md-6">
-          <label>Password:</label>
-          <input type="password" name="password" class="form-control">
+        <div class="form-row">
+          <div class="form group col-md-6">
+            <label>Password:</label>
+            <input type="password" name="password" class="form-control">
+          </div>
         </div>
-        <div class="form group col-md-6">
-          <input type="submit" value="Login" class="btn btn-primary" id="login-page-btn">
+          <div class="form group col-md-6">
+            <input type="submit" value="Login" class="btn btn-primary" id="login-page-btn">
+          </div>
+        <div class="create-account">
+          <h4>Don't have an account?</h4>
+          <a href="/users/new">Create an account</a>
         </div>
-      </div>
-      <div class="create-account">
-        <h4>Don't have an account?</h4>
-        <a href="/users/new">Create an account</a>
-      </div>
-    </form>
+      </form>
+    </div>
   </body>
 </html>
