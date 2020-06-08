@@ -60,6 +60,24 @@ header h1 {
   border: 1px solid indigo;
 }
 
+/* splash styling  */
+.splash-show {
+  background: white;
+  margin-top: .5em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid goldenrod;
+  margin-bottom: -1em;
+}
+
+.splash-show h2 {
+  text-align: center;
+}
+
+.splash-show p {
+  margin: .2em;
+}
+
 /* wonder index page style */
 
 .wonder-index {
