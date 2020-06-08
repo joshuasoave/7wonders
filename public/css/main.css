@@ -244,6 +244,12 @@ header h1 {
   .show-header {
     text-align: center;
   }
+
+  /* form */
+  #new-wonder {
+    margin-left: 25%;
+  }
+  
 }
 
 /* desktop style  */
@@ -264,7 +270,7 @@ header h1 {
   margin-bottom: 2em;
 }
 
-/* container for wonders show  */
+/*  wonders show  */
 
 .wonder-show {
   margin-top: 0;
@@ -289,6 +295,12 @@ header h1 {
   display: flex;
   justify-content: center;
   width: 70%;
+}
+
+/* form */
+#new-wonder {
+  margin-left: 25%;
+  width: 100%;
 }
 
 }
