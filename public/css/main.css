@@ -246,10 +246,11 @@ header h1 {
   }
 
   /* form */
-  #new-wonder {
+  #new-wonder, #edit-wonder {
     margin-left: 25%;
+    width: 100%;
   }
-  
+
 }
 
 /* desktop style  */
@@ -298,7 +299,7 @@ header h1 {
 }
 
 /* form */
-#new-wonder {
+#new-wonder, #edit-wonder {
   margin-left: 25%;
   width: 100%;
 }
