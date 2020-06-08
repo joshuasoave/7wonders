@@ -163,3 +163,10 @@ header h1 {
 .btn-secondary:hover {
   background: gold;
 }
+
+/* form styling  */
+
+.form-btns {
+  display: flex;
+  justify-content: space-between;
+}
