@@ -209,18 +209,47 @@ header h1 {
 }
 
 /* smaller laptop screens  */
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 740px) and (max-width: 989px) {
+
+  /* splash  */
 
   .splash-show {
     text-align: center;
     width: 100%;
     height: 170px;
+    margin-bottom: 2em;
+  }
+
+  /* container for wonders show  */
+
+  .wonder-show {
+    margin-top: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wonder-show img {
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wonder-btns {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .show-header {
+    text-align: center;
   }
 }
 
 /* desktop style  */
 @media only screen and (min-width: 990px) {
 
+/* splash page  */
 .splash-show {
   text-align: center;
   width: 80%;
@@ -229,6 +258,37 @@ header h1 {
 
 .splash-show p {
   line-height: 2em;
+}
+
+.splash-show {
+  margin-bottom: 2em;
+}
+
+/* container for wonders show  */
+
+.wonder-show {
+  margin-top: 0;
+  padding-left: 22%;
+}
+
+.wonder-show img {
+  height: 400px;
+  width: 70%;
+}
+
+.description {
+  width: 70%;
+}
+
+.show-header {
+  width: 70%;
+  text-align: center;
+}
+
+.wonder-btns {
+  display: flex;
+  justify-content: center;
+  width: 70%;
 }
 
 }
