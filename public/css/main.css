@@ -202,6 +202,8 @@ header h1 {
 
 #login-page-btn, #create-account-btn {
   margin-top: 1em;
+  margin-left: 70%;
+  width: 100px;
 }
 
 .create-account {
@@ -255,6 +257,11 @@ header h1 {
   #login-form {
     margin-left: 17%;
     width: 100%;
+  }
+
+  #create-account-form {
+    width: 100%;
+    margin-left: 17%;
   }
 
 }
@@ -315,4 +322,13 @@ header h1 {
   margin-left: 33%;
 }
 
+#create-account-form {
+  width: 100%;
+  margin-left: 27%;
+}
+
+#create-account-btn, #login-page-btn {
+  width: 150px;
+  margin-left: 73%;
+}
 }
