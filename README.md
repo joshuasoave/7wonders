@@ -23,7 +23,9 @@ https://gentle-badlands-23571.herokuapp.com/
 ## Installation Instructions
 To set this up on your local drive:
 * Npm init
+
 Install the following packages:
+
 1. Bcrypt
 2. Dotenv
 3. Ejs
