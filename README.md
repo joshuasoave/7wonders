@@ -7,18 +7,18 @@ This project is a global campaign to select 13 new world wonders. The winners wi
 https://gentle-badlands-23571.herokuapp.com/
 
 ## List of features
-*Submit a wonder
-*Edit a wonder
-*Delete a wonder
-*Vote on a wonder
+* Submit a wonder
+* Edit a wonder
+* Delete a wonder
+* Vote on a wonder
 
 ## Technologies Used
-*Node.js
-*Mongo DB
+* Node.js
+* Mongo DB
 
 ## Built With
-*Bootstrap
-*CSS5
+* Bootstrap
+* CSS5
 
 ## Installation Instructions
 To set this up on your local drive:
