@@ -1,6 +1,6 @@
   <% if (currentUser) {%>
       <ul class="nav justify-content-around nav-fill nav-pills">
-        <li class="nav-item">
+        <li <% if(currentUser.isAdmin != true) { %> style="display:none" <%}%> class="nav-item">
           <a class="nav-link" href="/wonders/new">Submit a wonder</a>
         </li>
   <%} else{%>

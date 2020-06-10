@@ -27,10 +27,10 @@
           <form action="/wonders" method="GET">
             <input class="btn btn-secondary" type="submit" value="Back">
           </form>
-          <form action="/wonders/<%=wonder.id%>/edit" method="GET">
+          <form <% if(currentUser.isAdmin != true) { %> style="display:none" <%}%> action="/wonders/<%=wonder.id%>/edit" method="GET">
             <input class="btn btn-primary" type="submit" value="Edit">
           </form>
-          <form action="/wonders/<%=wonder.id%>?_method=DELETE" method="POST">
+          <form <% if(currentUser.isAdmin != true) { %> style="display:none" <%}%> action="/wonders/<%=wonder.id%>?_method=DELETE" method="POST">
             <input class="btn btn-primary" type="submit" value="Delete">
           </form>
         </div>
