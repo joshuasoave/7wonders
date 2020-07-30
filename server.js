@@ -46,6 +46,7 @@ app.use(
     saveUnitialized: false
   })
 )
+
 //wonders controller and wonders path
 app.use('/wonders', wondersController)
 //users path and controller

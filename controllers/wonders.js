@@ -5,6 +5,7 @@ const Original7 = require('../models/og7.js')
 const sevenWonders = require('../seed/og7.js')
 const newWonders = require('../seed/newwonders.js')
 
+
 const isAuthenticated = (req, res, next) => {
   if (req.session.currentUser) {
     return next()
